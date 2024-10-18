@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #a9a9a994;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow:hidden;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* sidebar menu scroll design */
+.sidebarScroll::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+.sidebarScroll::-webkit-scrollbar-track {
+  /* -webkit-box-shadow: inset 0 0 6px #312529; */
+  box-shadow: 0 0 6px #cbd5e1;
+}
+
+.sidebarScroll::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  outline: 1.5px solid #cbd5e1;
+}
+
+.sidebarScrollHidden::-webkit-scrollbar {
+  display: none;
+}
